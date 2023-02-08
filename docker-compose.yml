@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  nextjs-template:
+    image: nextjs-template:latest-dev
+    ports:
+      - "3000:3000"        
+    environment:
+      - DOMAIN
+    volumes:
+      - ./src:/app/src:cached

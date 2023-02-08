@@ -1,0 +1,13 @@
+@import "@shared/styles/variables";
+@import "@shared/styles/breakpoints";
+
+.mainContainer {
+    height: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include breakpoint(medium down) {
+        height: unset;
+    }
+}
+

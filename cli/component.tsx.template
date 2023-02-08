@@ -1,0 +1,10 @@
+import React from "react";
+import style from "./$$COMPONENT_NAME.module.scss";
+
+interface $$COMPONENT_NAMEProps {}
+
+const $$COMPONENT_NAME = ({}: $$COMPONENT_NAMEProps) => {
+    return <div>$$COMPONENT_NAME</div>;
+};
+
+export default $$COMPONENT_NAME;

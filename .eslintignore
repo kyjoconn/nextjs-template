@@ -1,0 +1,6 @@
+next.config.js
+public/
+jest.config.js
+jest.setup.js
+ecosystem.next.config.js
+cli/*

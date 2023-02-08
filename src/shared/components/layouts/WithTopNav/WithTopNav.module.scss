@@ -1,0 +1,43 @@
+@import "@shared/styles/variables";
+@import "@shared/styles/breakpoints";
+
+.topNavBar {
+    background-color: $white;
+    position: relative;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.topNavBarItems {
+    background-color: $white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 16px 64px;
+    width: 100%;
+    @include breakpoint(medium down) {
+        padding: 16px 0;
+        justify-content: center;
+    }
+}
+
+.topNavBarDivider {
+    background-color: $gray;
+    color: $gray;
+    height: 1px;
+    width: 100%;
+}
+
+.noDecoration {
+    text-decoration: none;
+    color: #000000;
+}
+
+.pageWrapper {
+    margin: 16px;
+    @include breakpoint(medium up) {
+        margin: 64px;
+    }
+}
+
+

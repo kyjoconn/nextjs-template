@@ -1,0 +1,1 @@
+export const ONLY_USED_IN_FEATURE = "ONLY_USED_IN_FEATURE";

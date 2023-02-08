@@ -1,0 +1,13 @@
+@import "@shared/styles/breakpoints";
+
+// this is where common classes can go
+// e.g. each page should have the same max-width and padding:
+
+.pageContainer {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 16px;
+    @include breakpoint(medium up) {
+        padding: 0 32px;
+    }
+}
