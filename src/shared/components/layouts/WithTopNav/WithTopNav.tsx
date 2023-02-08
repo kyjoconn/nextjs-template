@@ -20,7 +20,7 @@ const WithTopNav = ({children}: WithTopNavProps) => {
             <nav className={style.topNavBar}>
                 <div className={style.topNavBarItems}>
                     <Link href="/" className={style.noDecoration}>
-                        NextJS - Template 🚀🚀🚀
+                        <b>NextJS - Template 🚀🚀🚀</b>
                     </Link>
                 </div>
                 <div className={style.topNavBarDivider} />

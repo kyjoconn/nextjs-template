@@ -5,6 +5,7 @@ import MessageBox from "@shared/components/MessageBox/MessageBox";
 import { GetServerSideProps, GetServerSidePropsContext } from "next/types";
 import { getUser, User } from "@shared/utils/Auth";
 import useAppContext from "@src/shared/hooks/useAppContext";
+import ExampleList from "@src/shared/components/ExampleList"
 
 
 export const getServerSideProps: GetServerSideProps = async (context: GetServerSidePropsContext) => {
@@ -33,15 +34,22 @@ const GetSspPage = ({user}: GetSspPageProps) => {
     // const {user: userFromContext} = useAppContext()
     return (
         <main className={`${commonStyle.pageContainer} ${style.mainContainer}`}>
-            {/* <h2>Hello good sir, {`${userFromContext?.name}`}</h2> */}
-            <h2>Hello good sir, {`${user.name}`}</h2>
             <MessageBox title="getServerSideProps">
                 <p>
                     getServerSideProps allows you to fetch data, before rendering the page. This comes at a tradeoff.
                     The page load will be blocked entirely while fetching, but there will be no loading states/content shift/etc.
                     Pages that use this cannot be fully cached by a CDN.
                 </p>
+                <p>
+                    Here we fetch a user before loading the page, and pass it to the page as a prop.
+                    We can also pass the user to global AppContext.
+                </p>
             </MessageBox>
+            <div className={commonStyle.listContainer}>
+            <h2>Current User: {`${user.name}`}</h2>
+            <ExampleList />
+            </div>
+            {/* <h2>Hello good sir, {`${userFromContext?.name}`}</h2> */}
             
         </main>
     );

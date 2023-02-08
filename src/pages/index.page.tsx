@@ -2,6 +2,7 @@ import React from "react";
 import commonStyle from "@shared/styles/common.module.scss";
 import style from "./index.module.scss"
 import MessageBox from "@shared/components/MessageBox/MessageBox";
+import ExampleList from "@src/shared/components/ExampleList";
 
 const Home = () => {
     return (
@@ -12,7 +13,9 @@ const Home = () => {
                     It will automatically be built statically and can be cached by a CDN 🎉. 
                 </p>
             </MessageBox>
-            
+            <div className={commonStyle.listContainer}>
+                <ExampleList />
+            </div>
         </main>
     );
 }
